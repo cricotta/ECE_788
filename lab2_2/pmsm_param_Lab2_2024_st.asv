@@ -14,7 +14,8 @@ C33=C32*C32inv;
 Tp=100e-6;  % switching period
 Ts=Tp;     % sampling period
 Tsim=min([Tp Ts])/100;  % simulation step-size
-Tstep=0.20;
+Ts = Tsim;
+Tstep=0.10;
 Tf=0.5;
 %%% PMSM Parameters %%%%%%%%%%%%%
 Pmrated=80e3;  % rated power
@@ -59,13 +60,14 @@ GVSI=1;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Current Control
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %tr=1e-3;  % desired response time
- wBW = 2*pi*500; % desired bandwidth
+ tr=1e-3;  % desired response time
+ BW = 3/tr;
+ wBW = 2*pi*BW;
  Psif0=1.0*Psif;
- Rs0=1.0*Rs;
- Ld0=1.0*Ld;
- Lq0=1.0*Lq;
- %tid=Ld/Rs;
+ Rs0=1.5*Rs;
+ Ld0=2.0*Ld;
+ Lq0=0.5*Lq;
+% tid=...;
  Kpd=Ld0*wBW;
  %tiq=Lq/Rs;
  Kpq=Lq0*wBW;
