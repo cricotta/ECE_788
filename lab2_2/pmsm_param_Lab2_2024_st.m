@@ -10,7 +10,7 @@ C32=[ 1       0;
     -1/2 -sqrt(3)/2];
 
 C33=C32*C32inv;
-
+Fs = 10000;
 Tp=100e-6;  % switching period
 Ts=Tp;     % sampling period
 Tsim=min([Tp Ts])/100;  % simulation step-size
@@ -61,12 +61,12 @@ GVSI=1;
 %%% Current Control
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  tr=1e-3;  % desired response time
- BW = 3/tr;
- wBW = 2*pi*BW;
+ Bw = 3/tr;
+ wBW = 2*pi*Bw;
  Psif0=1.0*Psif;
- Rs0=1.5*Rs;
- Ld0=2.0*Ld;
- Lq0=0.5*Lq;
+ Rs0=1.0*Rs;
+ Ld0=1.0*Ld;
+ Lq0=1.0*Lq;
 % tid=...;
  Kpd=Ld0*wBW;
  %tiq=Lq/Rs;
