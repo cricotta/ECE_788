@@ -159,12 +159,12 @@ DPLL=Kpll*DFPLL*c2d(1/s^2,Ts,'zoh');
 bode(DPLL,'r')
 hold off
 %%% Sensorless gains
-b=0;
+b=0.5;
 ksi=0; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Initial Values
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Thetae0=0;
+Thetae0=-180;
 Wm0=3000*pi/30*0;
 Tm0=(kL+f)*Wm0;
 dTm0=Tmrated/2; 
