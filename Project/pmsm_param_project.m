@@ -10,7 +10,8 @@ C32=[ 1       0;
     -1/2 -sqrt(3)/2];
 
 C33=C32*C32inv;
-
+A = 0.01;
+wh = 160;
 Tp=100e-6;  % switching period
 Ts=Tp;      % sampling period
 Tsim=min([Tp Ts])/100;  % simulation step-size
