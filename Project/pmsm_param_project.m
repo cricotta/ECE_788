@@ -10,7 +10,7 @@ C32=[ 1       0;
     -1/2 -sqrt(3)/2];
 
 C33=C32*C32inv;
-A = 0.04;
+A = 0.1;
 wh = 10000;
 Tp=200e-6;  % switching period
 Ts=Tp;      % sampling period
